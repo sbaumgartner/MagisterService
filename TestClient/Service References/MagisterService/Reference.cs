@@ -20,6 +20,24 @@ namespace TestClient.MagisterService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/LogIn", ReplyAction="http://tempuri.org/IMagisterBattle/LogInResponse")]
         System.Threading.Tasks.Task<string> LogInAsync(string name, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/GetBattleState", ReplyAction="http://tempuri.org/IMagisterBattle/GetBattleStateResponse")]
+        BattleLib.Battle GetBattleState(string UserKey, string battleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/GetBattleState", ReplyAction="http://tempuri.org/IMagisterBattle/GetBattleStateResponse")]
+        System.Threading.Tasks.Task<BattleLib.Battle> GetBattleStateAsync(string UserKey, string battleID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/StartBattle", ReplyAction="http://tempuri.org/IMagisterBattle/StartBattleResponse")]
+        string StartBattle(string UserKey);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/StartBattle", ReplyAction="http://tempuri.org/IMagisterBattle/StartBattleResponse")]
+        System.Threading.Tasks.Task<string> StartBattleAsync(string UserKey);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/TakeTurn", ReplyAction="http://tempuri.org/IMagisterBattle/TakeTurnResponse")]
+        bool TakeTurn(BattleLib.RoundAction Turn, string UserKey, string BattleKey);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMagisterBattle/TakeTurn", ReplyAction="http://tempuri.org/IMagisterBattle/TakeTurnResponse")]
+        System.Threading.Tasks.Task<bool> TakeTurnAsync(BattleLib.RoundAction Turn, string UserKey, string BattleKey);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +73,30 @@ namespace TestClient.MagisterService {
         
         public System.Threading.Tasks.Task<string> LogInAsync(string name, string pass) {
             return base.Channel.LogInAsync(name, pass);
+        }
+        
+        public BattleLib.Battle GetBattleState(string UserKey, string battleID) {
+            return base.Channel.GetBattleState(UserKey, battleID);
+        }
+        
+        public System.Threading.Tasks.Task<BattleLib.Battle> GetBattleStateAsync(string UserKey, string battleID) {
+            return base.Channel.GetBattleStateAsync(UserKey, battleID);
+        }
+        
+        public string StartBattle(string UserKey) {
+            return base.Channel.StartBattle(UserKey);
+        }
+        
+        public System.Threading.Tasks.Task<string> StartBattleAsync(string UserKey) {
+            return base.Channel.StartBattleAsync(UserKey);
+        }
+        
+        public bool TakeTurn(BattleLib.RoundAction Turn, string UserKey, string BattleKey) {
+            return base.Channel.TakeTurn(Turn, UserKey, BattleKey);
+        }
+        
+        public System.Threading.Tasks.Task<bool> TakeTurnAsync(BattleLib.RoundAction Turn, string UserKey, string BattleKey) {
+            return base.Channel.TakeTurnAsync(Turn, UserKey, BattleKey);
         }
     }
 }

@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BattleLib" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IMagisterBattle_LogIn_InputMessage">
@@ -12,16 +13,73 @@
   <wsdl:message name="IMagisterBattle_LogIn_OutputMessage">
     <wsdl:part name="parameters" element="tns:LogInResponse" />
   </wsdl:message>
+  <wsdl:message name="IMagisterBattle_GetBattleState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBattleState" />
+  </wsdl:message>
+  <wsdl:message name="IMagisterBattle_GetBattleState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBattleStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMagisterBattle_StartBattle_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartBattle" />
+  </wsdl:message>
+  <wsdl:message name="IMagisterBattle_StartBattle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartBattleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMagisterBattle_TakeTurn_InputMessage">
+    <wsdl:part name="parameters" element="tns:TakeTurn" />
+  </wsdl:message>
+  <wsdl:message name="IMagisterBattle_TakeTurn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TakeTurnResponse" />
+  </wsdl:message>
   <wsdl:portType name="IMagisterBattle">
     <wsdl:operation name="LogIn">
       <wsdl:input wsaw:Action="http://tempuri.org/IMagisterBattle/LogIn" message="tns:IMagisterBattle_LogIn_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMagisterBattle/LogInResponse" message="tns:IMagisterBattle_LogIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBattleState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMagisterBattle/GetBattleState" message="tns:IMagisterBattle_GetBattleState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMagisterBattle/GetBattleStateResponse" message="tns:IMagisterBattle_GetBattleState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartBattle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMagisterBattle/StartBattle" message="tns:IMagisterBattle_StartBattle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMagisterBattle/StartBattleResponse" message="tns:IMagisterBattle_StartBattle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TakeTurn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMagisterBattle/TakeTurn" message="tns:IMagisterBattle_TakeTurn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMagisterBattle/TakeTurnResponse" message="tns:IMagisterBattle_TakeTurn_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IMagisterBattle" type="tns:IMagisterBattle">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="LogIn">
       <soap:operation soapAction="http://tempuri.org/IMagisterBattle/LogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBattleState">
+      <soap:operation soapAction="http://tempuri.org/IMagisterBattle/GetBattleState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartBattle">
+      <soap:operation soapAction="http://tempuri.org/IMagisterBattle/StartBattle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TakeTurn">
+      <soap:operation soapAction="http://tempuri.org/IMagisterBattle/TakeTurn" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

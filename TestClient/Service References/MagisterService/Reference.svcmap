@@ -24,6 +24,7 @@
   <Metadata>
     <MetadataFile FileName="MagisterBattleService.disco" MetadataType="Disco" ID="62923ba8-6fc4-456b-b3f9-995c1b1d5b8b" SourceId="1" SourceUrl="http://localhost/Magister/MagisterBattleService.svc?disco" />
     <MetadataFile FileName="MagisterBattleService.wsdl" MetadataType="Wsdl" ID="d8287981-31de-447b-8bed-b8ad6fbcdcbc" SourceId="1" SourceUrl="http://localhost/Magister/MagisterBattleService.svc?wsdl" />
+    <MetadataFile FileName="MagisterBattleService2.xsd" MetadataType="Schema" ID="6effa8c8-01c3-42e5-ab8e-19a56c99f3a5" SourceId="1" SourceUrl="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd2" />
     <MetadataFile FileName="MagisterBattleService.xsd" MetadataType="Schema" ID="0f771943-c1a8-4eef-b2b9-70f83b58c6c5" SourceId="1" SourceUrl="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd1" />
     <MetadataFile FileName="MagisterBattleService1.xsd" MetadataType="Schema" ID="bfb754c1-9703-49f0-922a-6f1385250017" SourceId="1" SourceUrl="http://localhost/Magister/MagisterBattleService.svc?xsd=xsd0" />
   </Metadata>

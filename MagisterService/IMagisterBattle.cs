@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BattleLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -16,7 +17,14 @@ namespace MagisterService
         [OperationContract]
         string LogIn(string name, string pass);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        Battle GetBattleState(string UserKey, string battleID);
+
+        [OperationContract]
+        string StartBattle(string UserKey);
+
+        [OperationContract]
+        bool TakeTurn(RoundAction Turn, string UserKey, string BattleKey);
     }
 
 
