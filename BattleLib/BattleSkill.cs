@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
 
 namespace BattleLib
 {
+    [DataContract]
     public class BattleSkill
     {
+        [DataMember]
         public string SkillName { get; set; }
+        [DataMember]
         public string SkillDescription { get; set; }
+        [DataMember]
         Dictionary<string, int> vars;
 
         public BattleSkill(string name)
